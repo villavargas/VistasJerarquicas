@@ -6,16 +6,7 @@
         </attribute>
         <userInfo/>
     </entity>
-    <entity name="ModelLibro" syncable="YES">
-        <attribute name="autores" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <fetchRequest name="petLibro" entity="ModelLibro" predicateString="titulo == $titulo"/>
-    <fetchRequest name="petLibros" entity="ModelLibro"/>
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="ModelLibro" positionX="358" positionY="396" width="128" height="103"/>
     </elements>
 </model>
