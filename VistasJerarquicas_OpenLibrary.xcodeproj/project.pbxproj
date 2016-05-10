@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		51A82B2A1CDFA816007CCACD /* VistasJerarquicas_OpenLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VistasJerarquicas_OpenLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A82B2D1CDFA817007CCACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51A82B301CDFA817007CCACD /* VistasJerarquicas_OpenLibrary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VistasJerarquicas_OpenLibrary.xcdatamodel; sourceTree = "<group>"; };
+		51A82B301CDFA817007CCACD /* VistasJerarquicas_OpenLibrary.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodeld; path = VistasJerarquicas_OpenLibrary.xcdatamodel; sourceTree = "<group>"; };
 		51A82B321CDFA817007CCACD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		51A82B341CDFA817007CCACD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		51A82B371CDFA817007CCACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
