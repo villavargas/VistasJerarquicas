@@ -23,6 +23,36 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
+        
+        print("comprobar que tengo algo en el modelo");
+        self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let seccionEntidad = NSEntityDescription.entityForName("Libro", inManagedObjectContext: self.contexto!)
+        let peticion = seccionEntidad?.managedObjectModel.fetchRequestTemplateForName("petLibros")
+        do {
+            isbnAcumulados = []
+            let seccionEntidad2 = try self.contexto?.executeFetchRequest(peticion!)
+            if (seccionEntidad2?.count > 0) {
+                print("existen elementos dentro");
+                for seccionEntidadInd in seccionEntidad2! {
+                    print(seccionEntidadInd.valueForKey("titulo"))
+                    var imagenLibro:UIImage?
+                    if seccionEntidadInd.valueForKey("imagen") != nil {
+                        imagenLibro = UIImage(data: seccionEntidadInd.valueForKey("imagen") as! NSData)
+                    } else {
+                        imagenLibro = nil
+                    }
+                    let isbnM = ISBNModelo(isbn: seccionEntidadInd.valueForKey("isbn") as! String, nombre: seccionEntidadInd.valueForKey("titulo") as! String, autores: [seccionEntidadInd.valueForKey("autores") as! String], imagen: imagenLibro)
+                    isbnAcumulados.append(isbnM)
+                }
+                tableView.reloadData()
+            } else {
+                print("no hay elementos")
+            }
+            
+        } catch {
+            
+        }
+
 
     }
     

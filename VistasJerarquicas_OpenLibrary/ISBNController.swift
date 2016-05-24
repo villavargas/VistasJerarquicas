@@ -52,6 +52,36 @@ class ISBNController: UIViewController,UITextFieldDelegate  {
     
     @IBAction func aceptar(sender: AnyObject) {
         
+        let seccionEntidad = NSEntityDescription.entityForName("Libro", inManagedObjectContext: self.contexto!)
+        let peticion = seccionEntidad?.managedObjectModel.fetchRequestFromTemplateWithName("petLibro", substitutionVariables: ["titulo":self.tituloLibro])
+        do {
+            let seccionEntidad2 = try self.contexto?.executeFetchRequest(peticion!)
+            if (seccionEntidad2?.count > 0) {
+                print("Ya existe");
+            } else {
+                print("No existe libro con ese nombre")
+                // Guardamos en la base de datos
+                let nuevaSeccionEntidad = NSEntityDescription.insertNewObjectForEntityForName("Libro", inManagedObjectContext: self.contexto!)
+                nuevaSeccionEntidad.setValue(self.tituloLibro, forKey: "titulo")
+                if let imagen = imagenLibro {
+                    nuevaSeccionEntidad.setValue(UIImagePNGRepresentation(imagen), forKey: "imagen")
+                } else {
+                    nuevaSeccionEntidad.setValue(nil, forKey: "imagen")
+                }
+                nuevaSeccionEntidad.setValue(self.autores, forKey: "autores")
+                nuevaSeccionEntidad.setValue(self.isbnLibro, forKey: "isbn")
+                do {
+                    try self.contexto?.save()
+                } catch {
+                    print("error")
+                }
+            }
+            
+        } catch {
+            
+        }
+
+        
     if let texto = ISBN.text {
             print("VC: \(texto) \(self.tituloLibro)   \(autoresLibro)    \(imagenLibro)   ")
             let isbn = ISBNModelo(isbn: texto, nombre: self.tituloLibro, autores: autoresLibro, imagen: imagenLibro)
