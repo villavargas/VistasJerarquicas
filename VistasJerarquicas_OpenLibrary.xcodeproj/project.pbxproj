@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5145711B1CF40C5F00E79F85 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 514571191CF40C5F00E79F85 /* Model.xcdatamodeld */; };
 		51A82B2E1CDFA817007CCACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A82B2D1CDFA817007CCACD /* AppDelegate.swift */; };
-		51A82B311CDFA817007CCACD /* VistasJerarquicas_OpenLibrary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51A82B2F1CDFA817007CCACD /* VistasJerarquicas_OpenLibrary.xcdatamodeld */; };
 		51A82B331CDFA817007CCACD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A82B321CDFA817007CCACD /* MasterViewController.swift */; };
 		51A82B351CDFA817007CCACD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A82B341CDFA817007CCACD /* DetailViewController.swift */; };
 		51A82B381CDFA817007CCACD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A82B361CDFA817007CCACD /* Main.storyboard */; };
@@ -19,9 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5145711A1CF40C5F00E79F85 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		51A82B2A1CDFA816007CCACD /* VistasJerarquicas_OpenLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VistasJerarquicas_OpenLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A82B2D1CDFA817007CCACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51A82B301CDFA817007CCACD /* VistasJerarquicas_OpenLibrary.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodeld; path = VistasJerarquicas_OpenLibrary.xcdatamodel; sourceTree = "<group>"; };
 		51A82B321CDFA817007CCACD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		51A82B341CDFA817007CCACD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		51A82B371CDFA817007CCACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +62,7 @@
 		51A82B2C1CDFA817007CCACD /* VistasJerarquicas_OpenLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				514571191CF40C5F00E79F85 /* Model.xcdatamodeld */,
 				51A82B2D1CDFA817007CCACD /* AppDelegate.swift */,
 				51A82B321CDFA817007CCACD /* MasterViewController.swift */,
 				51A82B341CDFA817007CCACD /* DetailViewController.swift */,
@@ -70,7 +71,6 @@
 				51A82B391CDFA817007CCACD /* Assets.xcassets */,
 				51A82B3B1CDFA818007CCACD /* LaunchScreen.storyboard */,
 				51A82B3E1CDFA818007CCACD /* Info.plist */,
-				51A82B2F1CDFA817007CCACD /* VistasJerarquicas_OpenLibrary.xcdatamodeld */,
 				51A82B481CE02D0A007CCACD /* Modelo.swift */,
 			);
 			path = VistasJerarquicas_OpenLibrary;
@@ -148,12 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51A82B311CDFA817007CCACD /* VistasJerarquicas_OpenLibrary.xcdatamodeld in Sources */,
 				51A82B451CDFBBC3007CCACD /* ISBNController.swift in Sources */,
 				51A82B2E1CDFA817007CCACD /* AppDelegate.swift in Sources */,
 				51A82B491CE02D0A007CCACD /* Modelo.swift in Sources */,
 				51A82B331CDFA817007CCACD /* MasterViewController.swift in Sources */,
 				51A82B351CDFA817007CCACD /* DetailViewController.swift in Sources */,
+				5145711B1CF40C5F00E79F85 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,13 +316,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		51A82B2F1CDFA817007CCACD /* VistasJerarquicas_OpenLibrary.xcdatamodeld */ = {
+		514571191CF40C5F00E79F85 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				51A82B301CDFA817007CCACD /* VistasJerarquicas_OpenLibrary.xcdatamodel */,
+				5145711A1CF40C5F00E79F85 /* Model.xcdatamodel */,
 			);
-			currentVersion = 51A82B301CDFA817007CCACD /* VistasJerarquicas_OpenLibrary.xcdatamodel */;
-			path = VistasJerarquicas_OpenLibrary.xcdatamodeld;
+			currentVersion = 5145711A1CF40C5F00E79F85 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
