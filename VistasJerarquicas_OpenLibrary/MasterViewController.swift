@@ -24,7 +24,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.viewDidLoad()
         tableView.reloadData()
         
-        print("comprobar que tengo algo en el modelo");
         self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let seccionEntidad = NSEntityDescription.entityForName("Libro", inManagedObjectContext: self.contexto!)
         let peticion = seccionEntidad?.managedObjectModel.fetchRequestTemplateForName("petLibros")
@@ -32,7 +31,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             isbnAcumulados = []
             let seccionEntidad2 = try self.contexto?.executeFetchRequest(peticion!)
             if (seccionEntidad2?.count > 0) {
-                print("existen elementos dentro");
                 for seccionEntidadInd in seccionEntidad2! {
                     print(seccionEntidadInd.valueForKey("titulo"))
                     var imagenLibro:UIImage?
